@@ -1,20 +1,19 @@
 <?php
 
 $nombre = readline("Donnez un nombre au hasard: ");
+$nombreInferieurA10 = $nombre < 10;
+$nombreSuperieurA20 = $nombre > 20;
 
-while($nombre <10 || $nombre > 20){
-    if($nombre < 10){
+while($nombreInferieurA10 || $nombreSuperieurA20){
+    if($nombreInferieurA10){
         echo("Vous devez rentrer un nombre plus grand \n");
     }
 
-    if($nombre > 20){
+    if($nombreSuperieurA20){
         echo("Vous devez rentrer un nombre plus petit \n");
     }
 
     $nombre = readline("Donnez un nombre au hasard: ");
 }
-
-if($nombre >= 10 || $nombre <= 20){
-    exit();
-}
+exit()
 ?>
